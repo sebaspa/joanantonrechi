@@ -1,0 +1,10 @@
+@tailwind base;
+body {
+  @apply bg-primary-500 font-montserrat;
+}
+//@import url("./fonts.scss");
+@tailwind components;
+
+@import "./menus.scss";
+
+@tailwind utilities;
