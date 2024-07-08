@@ -1,0 +1,7 @@
+.projectCard {
+  @apply h-[400px] w-full;
+
+  &__image {
+    @apply h-[400px] w-full object-cover #{!important};
+  }
+}
