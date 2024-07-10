@@ -1,7 +1,19 @@
 .projectCard {
-  @apply h-[400px] w-full;
+  @apply h-[400px] w-full relative;
 
   &__image {
     @apply h-[400px] w-full object-cover #{!important};
+  }
+
+  &__overlay {
+    @apply absolute bottom-0 left-0 w-full p-4;
+  }
+
+  &__title {
+    @apply text-base md:text-lg uppercase font-extrabold text-primary-500;
+  }
+
+  &__category {
+    @apply text-sm md:text-base uppercase font-medium text-primary-500;
   }
 }
