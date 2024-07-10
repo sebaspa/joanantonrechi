@@ -1,0 +1,12 @@
+.gridProjects {
+  @apply grid grid-cols-12;
+}
+
+.gridProjects__item {
+  @apply col-span-12 md:col-span-4;
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    @apply col-span-12 md:col-span-6;
+  }
+}

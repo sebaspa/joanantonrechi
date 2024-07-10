@@ -112,6 +112,7 @@ $RECYCLE.BIN/
 /plugins/hello.php
 /plugins/elementor
 /plugins/wp-migrate-db
+/plugins/copy-delete-posts
 
 # Uploads
 /uploads/
