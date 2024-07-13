@@ -1,0 +1,5 @@
+.gallery {
+  &__title {
+    @apply text-2xl uppercase font-medium text-black-500 tracking-widest text-center;
+  }
+}
