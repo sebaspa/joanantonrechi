@@ -1,5 +1,25 @@
 .gallery {
   &__title {
-    @apply text-2xl uppercase font-medium text-black-500 tracking-widest text-center;
+    @apply text-2xl uppercase font-medium text-black-500 tracking-widest text-center mb-10 md:mb-20;
+  }
+}
+
+.swiper-project-gallery {
+  .swiper-slide {
+    img {
+      @apply h-96 md:h-[650px] w-full object-cover #{!important};
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px; /* Ancho de las flechas */
+    height: 30px; /* Alto de las flechas */
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: #c6446a; /* Color de las flechas */
+    font-size: 30px; /* Tamaño del icono de las flechas */
   }
 }

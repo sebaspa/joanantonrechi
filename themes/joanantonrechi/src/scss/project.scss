@@ -1,8 +1,8 @@
 .singleProjectHero {
-  @apply h-[450px] w-full relative;
+  @apply h-96 md:h-[450px] w-full relative;
 
   &__image {
-    @apply h-[450px] w-full object-cover #{!important};
+    @apply h-96 md:h-[450px] w-full object-cover #{!important};
   }
 
   &__overlay {
