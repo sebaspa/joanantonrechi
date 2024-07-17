@@ -13,7 +13,7 @@ function get_custom_post_type_category($post_id, $category)
   }
 }
 
-$category_name = get_custom_post_type_category($post_id, 'project-category');
+$category_name = get_custom_post_type_category(get_the_ID(), 'project-category');
 
 $image_id = get_post_meta(get_the_ID(), 'joanantonrechi_fields_project_image_id', true);
 $image_size = 'project_single';
