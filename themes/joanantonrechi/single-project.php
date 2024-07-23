@@ -37,23 +37,27 @@ $projectText = get_post_meta(get_the_ID(), 'joanantonrechi_fields_project_descri
     </div>
     <div class="gallery">
       <p class="gallery__title">Galería</p>
-      <div class="swiper swiper-project-gallery">
-        <div class="swiper-wrapper">
-          <?php
-          foreach ($gallery as $image) {
-            $image_id = $image['image_id'];
-            $image_size = 'project_gallery';
-            $image_src = wp_get_attachment_image_src($image_id, $image_size);
-            ?>
-            <a href="<?php echo $image_src[0]; ?>" data-lightbox="roadtrip" class="swiper-slide">
-              <img src="<?php echo $image_src[0]; ?>" alt="project image" class="gallery__image">
-            </a>
-            <?php
-          }
-          ?>
+      <div class="grid grid-cols-12">
+        <div class="col-span-12 md:col-span-10 md:col-start-2">
+          <div class="swiper swiper-project-gallery">
+            <div class="swiper-wrapper">
+              <?php
+              foreach ($gallery as $image) {
+                $image_id = $image['image_id'];
+                $image_size = 'project_gallery';
+                $image_src = wp_get_attachment_image_src($image_id, $image_size);
+                ?>
+                <a href="<?php echo $image_src[0]; ?>" data-lightbox="roadtrip" class="swiper-slide">
+                  <img src="<?php echo $image_src[0]; ?>" alt="project image" class="gallery__image">
+                </a>
+                <?php
+              }
+              ?>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
     </div>
   </div>

@@ -23,3 +23,11 @@
     font-size: 30px; /* Tamaño del icono de las flechas */
   }
 }
+
+.lightbox {
+  display: flex;
+  flex-direction: column-reverse;
+  .lb-dataContainer {
+    margin-bottom: 20px;
+  }
+}
