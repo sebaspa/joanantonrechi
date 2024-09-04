@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('VERSION')) {
-  define('VERSION', '1.0.1');
+  define('VERSION', '1.0.3');
 }
 
 function joanantonrechi_setup()
@@ -39,14 +39,16 @@ add_action('after_setup_theme', 'joanantonrechi_setup');
 function joanantonrechi_styles_scripts()
 {
 
-  wp_enqueue_style('lightbox2-style', get_template_directory_uri() . '/dist/lightbox2/css/lightbox.min.css', array(), '2.0');
-  wp_enqueue_script('lightbox2-script', get_template_directory_uri() . '/dist/lightbox2/js/lightbox.min.js', array('jquery'), '2.0', true);
+
+  wp_enqueue_style('fancybox-style', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css', array(), '5.0');
+  wp_enqueue_script('fancybox-script', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', array('jquery'), '5.0', true);
 
   wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '2.0');
   wp_enqueue_script('swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '2.0', true);
 
-  wp_enqueue_style('joanantonrechi-style', get_template_directory_uri() . '/dist/css/app.css', array('font-awesome', 'lightbox2-style'), VERSION);
-  wp_enqueue_script('joanantonrechi-script', get_template_directory_uri() . '/dist/js/app.js', array('jquery', 'lightbox2-script'), VERSION, true);
+  wp_enqueue_style('joanantonrechi-style', get_template_directory_uri() . '/dist/css/app.css', array('font-awesome', 'fancybox-style'), VERSION);
+  wp_enqueue_style('joanantonrechi-style2', get_template_directory_uri() . '/dist/css/app2.css', array('joanantonrechi-style'), VERSION);
+  wp_enqueue_script('joanantonrechi-script', get_template_directory_uri() . '/dist/js/app.js', array('jquery', 'fancybox-script'), VERSION, true);
 }
 
 add_action('wp_enqueue_scripts', 'joanantonrechi_styles_scripts');

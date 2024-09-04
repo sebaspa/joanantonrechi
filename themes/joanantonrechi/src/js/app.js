@@ -3,11 +3,6 @@ jQuery(function () {
     jQuery(".primaryMenu").toggleClass("hidden");
   });
 
-  lightbox.option({
-    disableScrolling: true,
-    positionFromTop: 80,
-    showImageNumberLabel: false
-  })
 });
 
 const swiper = new Swiper(".swiper-project-gallery", {
@@ -19,3 +14,9 @@ const swiper = new Swiper(".swiper-project-gallery", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+Fancybox.bind('[data-fancybox="gallery"]', {
+  Thumbs: {
+    type: "classic",
+  },
+});  

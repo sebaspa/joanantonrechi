@@ -1,6 +1,14 @@
 @tailwind base;
 body {
-  @apply bg-primary-500 font-montserrat;
+  color: #31302d;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #31302d;
 }
 //@import url("./fonts.scss");
 @tailwind components;

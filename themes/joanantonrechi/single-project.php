@@ -47,7 +47,7 @@ $projectText = get_post_meta(get_the_ID(), 'joanantonrechi_fields_project_descri
                 $image_size = 'project_gallery';
                 $image_src = wp_get_attachment_image_src($image_id, $image_size);
                 ?>
-                <a href="<?php echo $image_src[0]; ?>" data-lightbox="roadtrip" class="swiper-slide">
+                <a data-fancybox="gallery" data-src="<?php echo $image_src[0]; ?>" class="swiper-slide">
                   <img src="<?php echo $image_src[0]; ?>" alt="project image" class="gallery__image">
                 </a>
                 <?php
@@ -84,10 +84,11 @@ $interestProjects = new WP_Query(
       <?php
       $category = get_the_terms($post->ID, 'project-category');
       $image_id = get_post_meta($post->ID, 'joanantonrechi_fields_project_image_id', true);
-      $image_size = 'project_single';
+      $image_size = 'project_grid';
       $image_src = wp_get_attachment_image_src($image_id, $image_size);
       ?>
-      <a href="<?php echo get_permalink($post->ID, false) ?>" class="col-span-3 lg:col-span-1 relative mb-4 lg:mb-0">
+      <a href="<?php echo get_permalink($post->ID, false) ?>"
+        class="col-span-3 lg:col-span-1 relative mb-4 lg:mb-0 w-full h-[230px] bg-gray-300">
         <img src="<?php echo $image_src[0]; ?>" alt="<?php echo $post->post_title; ?>"
           class="w-full h-[230px] object-cover" />
         <div class="absolute bottom-0 left-0 w-full p-4">

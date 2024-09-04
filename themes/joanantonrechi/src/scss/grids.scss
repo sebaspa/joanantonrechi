@@ -7,6 +7,6 @@
 
   &:nth-child(1),
   &:nth-child(2) {
-    @apply col-span-12 md:col-span-6;
+    @apply col-span-12 md:col-span-4;
   }
 }

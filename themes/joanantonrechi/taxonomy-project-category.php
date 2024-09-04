@@ -44,7 +44,8 @@ $projects = new WP_Query(
     $image_size = 'project_gallery';
     $image_src = wp_get_attachment_image_src($image_id, $image_size);
     ?>
-    <a href="<?php echo get_permalink($post->ID, false) ?>" class="col-span-3 lg:col-span-1 relative mb-4 lg:mb-0">
+    <a href="<?php echo get_permalink($post->ID, false) ?>"
+      class="col-span-3 lg:col-span-1 relative mb-4 lg:mb-0 h-72 md:h-[400px] bg-gray-300">
       <img src="<?php echo $image_src[0]; ?>" alt="<?php echo $post->post_title; ?>"
         class="w-full h-72 md:h-[400px] object-cover" />
       <div class="absolute bottom-0 left-0 w-full p-4">
@@ -63,8 +64,8 @@ $projects = new WP_Query(
         'format' => '',
         'current' => $current_page,
         'total' => $projects->max_num_pages,
-        'prev_text' => 'Anterior Página',
-        'next_text' => 'Siguiente Página',
+        'prev_text' => '<',
+        'next_text' => '>',
       )
     );
     ?>
