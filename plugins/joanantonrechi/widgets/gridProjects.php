@@ -21,7 +21,7 @@ class gridProjects extends WP_Widget
     $projects = new WP_Query(
       array(
         'post_type' => 'project',
-        'posts_per_page' => 11,
+        'posts_per_page' => 9,
         'order' => 'DESC',
         'post_status' => 'publish',
       )
@@ -32,7 +32,7 @@ class gridProjects extends WP_Widget
         <?php foreach ($projects->posts as $post): ?>
           <?php
           $category = get_the_terms($post->ID, 'project-category');
-          $image_id = get_post_meta($post->ID, 'joanantonrechi_fields_project_image_id', true);
+          $image_id = get_post_meta($post->ID, 'joanantonrechi_fields_project_imageFront_id', true);
           $image_size = 'project_grid';
           $image_src = wp_get_attachment_image_src($image_id, $image_size);
           ?>

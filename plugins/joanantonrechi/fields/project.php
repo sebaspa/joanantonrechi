@@ -40,6 +40,29 @@ function joanantonrechi_fields_project()
 
   $cmb->add_field(
     array(
+      'id' => $prefix . 'imageFront',
+      'name' => esc_html__('Imágen de portada', 'joanantonrechi'),
+      'desc' => esc_html__('Cargue una imágen.', 'joanantonrechi'),
+      'type' => 'file',
+      'attributes' => array(
+        'required' => 'required',
+        'accept' => 'image/*',
+      ),
+      'text' => array(
+        'add_upload_file_text' => esc_html__('Agregue una imágen para el proyecto', 'joanantonrechi'),
+      ),
+      'options' => array(
+        'url' => false, // Hide the text input for the url
+      ),
+      'query_args' => array(
+        'type' => 'image',
+      ),
+      'preview_size' => 'medium',
+    )
+  );
+
+  $cmb->add_field(
+    array(
       'id' => $prefix . 'category',
       'name' => esc_html__('Categoría', 'joanantonrechi'),
       'desc' => esc_html__('Seleccione una categoría.', 'joanantonrechi'),

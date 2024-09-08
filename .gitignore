@@ -113,6 +113,7 @@ $RECYCLE.BIN/
 /plugins/elementor
 /plugins/wp-migrate-db
 /plugins/copy-delete-posts
+/plugins/regenerate-thumbnails
 
 # Uploads
 /uploads/
