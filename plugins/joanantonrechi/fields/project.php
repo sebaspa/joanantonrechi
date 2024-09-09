@@ -117,6 +117,33 @@ function joanantonrechi_fields_project()
     )
   );
 
+  $cmb->add_field(array(
+    'id' => $prefix . 'viewInHome',
+    'name' => esc_html__('Ver en home', 'joanantonrechi'),
+    'desc' => esc_html__('Selecciona si quieres que aparezca en la home.', 'joanantonrechi'),
+    'type' => 'checkbox',
+  ));
+
+  $cmb->add_field(array(
+    'id' => $prefix . 'orderInHome',
+    'name' => __('Orden', 'joanantonrechi'),
+    'desc' => __('Selecciona el oorden, en que aparecerá en la home.', 'joanantonrechi'),
+    'type' => 'select',
+    'show_option_none' => true,
+    'default' => 'none',
+    'options' => array(
+      '1' => '1',
+      '2' => '2',
+      '3' => '3',
+      '4' => '4',
+      '5' => '5',
+      '6' => '6',
+      '7' => '7',
+      '8' => '8',
+      '9' => '9',
+    ),
+  ));
+
   $cmb->add_field(
     array(
       'id' => $prefix . 'gallery',

@@ -18,12 +18,21 @@ class gridProjects extends WP_Widget
   {
     //$numberPost = $instance['numberPost'];
 
+    $viewInHomeQuery = array(
+      'key' => 'joanantonrechi_fields_project_viewInHome',
+      'value' => 'on',
+      'compare' => '='
+    );
+
     $projects = new WP_Query(
       array(
         'post_type' => 'project',
         'posts_per_page' => 9,
-        'order' => 'DESC',
         'post_status' => 'publish',
+        'meta_query' => array($viewInHomeQuery),
+        'meta_key' => 'joanantonrechi_fields_project_orderInHome',
+        'orderby' => 'meta_value_num',
+        'order' => 'ASC',
       )
     );
     ?>

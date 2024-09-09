@@ -57,6 +57,6 @@ register_post_type('project', $args);
  * Images
  */
 
-add_image_size('project_grid', 800, 400, false);
+add_image_size('project_grid', 800, 400, true);
 add_image_size('project_single', 1920, 450, false);
 add_image_size('project_gallery', 1920, 650, false);
