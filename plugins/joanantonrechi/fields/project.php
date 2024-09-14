@@ -63,6 +63,18 @@ function joanantonrechi_fields_project()
 
   $cmb->add_field(
     array(
+      'id' => $prefix . 'author',
+      'name' => esc_html__('Autor', 'joanantonrechi'),
+      'desc' => esc_html__('Escriba el autor.', 'joanantonrechi'),
+      'type' => 'text',
+      'attributes' => array(
+        'required' => 'required',
+      ),
+    )
+  );
+
+  $cmb->add_field(
+    array(
       'id' => $prefix . 'category',
       'name' => esc_html__('Categoría', 'joanantonrechi'),
       'desc' => esc_html__('Seleccione una categoría.', 'joanantonrechi'),

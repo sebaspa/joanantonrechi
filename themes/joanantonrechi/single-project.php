@@ -20,7 +20,7 @@ $image_size = 'project_single';
 $image_src = wp_get_attachment_image_src($image_id, $image_size);
 $gallery = get_post_meta(get_the_ID(), 'joanantonrechi_fields_project_gallery', true);
 $projectText = get_post_meta(get_the_ID(), 'joanantonrechi_fields_project_description', true);
-
+$author = get_post_meta(get_the_ID(), 'joanantonrechi_fields_project_author', true);
 ?>
 
 <div class="singleProject">
@@ -29,6 +29,7 @@ $projectText = get_post_meta(get_the_ID(), 'joanantonrechi_fields_project_descri
     <div class="singleProjectHero__overlay">
       <p class="singleProjectHero__category"><?php echo $category_name; ?></p>
       <h1 class="singleProjectHero__title"><?php echo get_the_title(); ?></h1>
+      <p class="singleProjectHero__author"><?php echo $author; ?></p>
     </div>
   </div>
   <div class="container">
@@ -100,7 +101,7 @@ $interestProjects = new WP_Query(
     <?php wp_reset_postdata(); ?>
   </div>
 <?php else: ?>
-  <div class="col-span-12">
+  <div class=" col-span-12">
     <p class="text-center text-xl text-black-500">No hay resultados</p>
   </div>
 <?php endif; ?>

@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('VERSION')) {
-  define('VERSION', '1.0.3');
+  define('VERSION', '1.0.5');
 }
 
 function joanantonrechi_setup()
